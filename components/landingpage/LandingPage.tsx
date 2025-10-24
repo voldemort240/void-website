@@ -5,7 +5,7 @@ import React from 'react';
 import { Tooltip } from 'react-tooltip';
 import 'react-tooltip/dist/react-tooltip.css';
 
-import { FaArrowsAlt, FaCheck, FaChevronLeft, FaChevronRight, FaDiscord, FaDotCircle, FaExternalLinkSquareAlt, FaEye, FaLink, FaLock, FaStar } from 'react-icons/fa';
+import { FaArrowsAlt, FaCheck, FaChevronLeft, FaChevronRight, FaDiscord, FaDotCircle, FaExternalLinkSquareAlt, FaEye, FaGithub, FaLink, FaLock, FaStar } from 'react-icons/fa';
 import { FaArrowsLeftRight } from 'react-icons/fa6';
 
 import { VscVscode } from 'react-icons/vsc'
@@ -120,12 +120,12 @@ const Fold = () => {
 
                 <h1 className='text-center font-extrabold tracking-tighter leading-tight transition duration-200 mt-[12vh]'>
 
-                    <img className='isolate -mb-4 max-lg:-top-20 inset-0 pt-3 mx-auto max-sm:scale-75' src='/void/slice_of_void.png' alt={`A slice of the void`} height={250} width={250} />
+                    <img className='isolate -mb-4 max-lg:-top-20 inset-0 pt-3 mx-auto max-sm:scale-75' src='sol-icon.svg' alt={`A slice of the void`} height={150} width={150} />
 
                     <span className='text-black drop-shadow-xl text-3xl md:text-7xl font-bold tracking-tighter'>
                         {`The open source`}
                         <br />
-                        {`AI code editor.`}
+                        {`Solidity editor.`}
                         {/* {`The open source `}
                         <br />
                         {`AI Code Editor.`} */}
@@ -144,7 +144,7 @@ const Fold = () => {
                         {/* {`Void is an open source Cursor alternative. Develop in a fully-featured IDE, and host your LLM anywhere.`} */}
                         {/* {`Void is an open source Cursor alternative. We let you use the best AI tools, while having full control over privacy.`} */}
                         {/* {`Void is an open source Cursor alternative. Write code with the best AI tools, while having full control over your data.`} */}
-                        {`Void is an open source Cursor alternative. Write code with the best AI tools, use any model, and retain full control over your data.`}
+                        {`Sol Studio is an open-source IDE designed for working with Solidity. It offers features similar to Remix, making smart contract development easier and more efficient.`}
                     </div>
                     {/* {`Void is an open source Cursor alternative. Build your project with AI auto-complete, inline edits, and codebase chat, with full control over .`} */}
                     {/* {`We offer autocomplete, inline edits, embedded chat, agentic features, and more, without compromising privacy.`} */}
@@ -154,24 +154,7 @@ const Fold = () => {
                 </div>
 
                 <div className='flex gap-x-3 gap-y-4 justify-center max-sm:flex-wrap'>
-                    <DownloadButton posthogLabel="3" />
                     <StarOnGithubButton posthogLabel="2" />
-                </div>
-
-
-                {/* Backed by YC */}
-                <div className=' flex flex-col items-center w-full my-14 flex-nowrap text-nowrap'>
-                    <div className='inline-flex items-center relative px-5 rounded-full '>
-                        <span className="relative inline-flex items-center text-gray-500 font-semibold">
-                            Backed by
-                            <img src="/yc.svg" className="h-5 w-auto ml-2" alt="Y Combinator Logo" />
-                        </span>
-                    </div>
-
-                    {/* <a href='https://www.ycombinator.com/launches/Lrh-void-the-open-source-cursor-alternative' target='_blank'>
-                        <img alt='Launch YC: Void: The open source Cursor alternative' src='https://www.ycombinator.com/launches/Lrh-void-the-open-source-cursor-alternative/upvote_embed.svg' />
-                    </a> */}
-
                 </div>
             </div>
 
@@ -210,19 +193,25 @@ const CoreFeatures = () => {
 
 
         <h2 className='mx-auto text-center text-3xl lg:text-4xl tracking-tight font-black'>
-            {/* {`The AI Feature Classics.`} */}
-            {/* {`Native AI Integrations.`} */}
-            {`The AI Features You Love.`}
+            {`The Features You Will Love.`}
         </h2>
 
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-            <BigContent src='/demos/autocomplete3.png' title={`Tab`} desc={`Press 'Tab' to apply autocomplete.`} />
-            {/* <BigContent src='/demos2/aa.png' title={`Quick Edit`} desc={`Edit your selection inline.`} /> */}
-            {/* <BigContent src='/demos2/AgentMode.png' title={`Chat`} desc={`Agent, Gather, and Normal mode. `} /> */}
-            <BigContent src='/demos/cmdK1.png' title={`Quick Edit`} desc={`Edit your selection inline.`} />
-            {/* <BigContent src='/demos/chat5.png' imgClassName='py-12 bg-[#252526]' title={`Chat`} desc={`Agent, Gather, and Normal mode. `} /> */}
-            <BigContent src='/demos2/AgentMode.png' imgClassName='p-8 bg-[#1e1e1e]' title={`Chat`} desc={`Agent Mode, Gather Mode, and normal chat. `} />
-
+            <BigContent
+                src="/demos/autocomplete1.png"
+                title="Auto Completion"
+                desc="Syntax highlighting and intelligent code autocompletion."
+            />
+            <BigContent
+                src="/demos/deploy.png"
+                title="Deployment"
+                desc="Easily compile and deploy contracts to test networks."
+            />
+            <BigContent
+                src="/demos/tx.png"
+                title="Transactions"
+                desc="Interact with smart contracts and execute transactions seamlessly."
+            />
         </div>
 
     </section>
@@ -232,69 +221,9 @@ const CoreFeatures = () => {
 const ALotMoreFeatures = () => {
     return <div className='py-20 space-y-40'>
         <div>
-            <h2 className='mx-auto text-center text-4xl lg:text-5xl tracking-tight font-black'>
-                {/* {`All you could ask for.`} */}
-                {/* {`And Much More.`} */}
-                {/* {"Features."} */}
-                {"Any LLM, Anywhere."}
-            </h2>
-            <div className='mx-auto text-center text-balance max-sm:text-base text-xl max-w-2xl my-8'>
-                {`Void doesn't send your messages through a private backend like Cursor or Windsurf. Cut out the middleman and connect directly.`}
-            </div>
-            <div className='grid grid-cols-1 lg:grid-cols-2 justify-items-center gap-x-8 lg:gap-x-16 gap-y-6'>
-                {/* Box 1 */}
-                <div className='rounded-md gap-8 w-full flex flex-col justify-start bg-slate-100 p-8 space-y-6'>
-                    <div className='text-center text-3xl font-black'>
-                        Private LLMs
-                    </div>
-
-                    <div className="mx-auto w-fit grid grid-cols-4 max-w-[500px] place-items-center grayscale px-8" data-tooltip-id="hover-group-local">
-                        <ProviderLogo size={'sm'} className='brightness-50 p-1 opacity-[80%] h-10 sm:h-20 ' src="/ollama.png" alt="Ollama Logo" name="Ollama (Provider)" />
-                        <ProviderLogo size={'sm'} className='brightness-50  ' src="/deepseek.png" alt="DeepSeek Logo" name="DeepSeek R1, V3" />
-                        <ProviderLogo size={'sm'} className='brightness-50 p-2' src="/gemma3.png" alt="gemma" name="Google Gemma 3" />
-                        <ProviderLogo size={'sm'} className='brightness-50 w-10 sm:w-20 h-auto' src="/meta.svg" alt="Llama" name="Llama 4" />
-                        <ProviderLogo size={'sm'} className='brightness-50 p-2' src="/qwen.png" alt="Qwen Logo" name="Qwen 2.5 Coder, QwQ" />
-                        <ProviderLogo size={'sm'} className='brightness-50 p-2' src="/mistral_small.png" alt="mistral" name="Mistral, Codestral" />
-                        <ProviderLogo size={'sm'} className='brightness-5 p-4' src="/vllm.png" alt="vLLM Logo" name="vLLM (Provider)" />
-                        <ProviderLogo size={'sm'} className='brightness-50 p-3 opacity-[80%]' src="/openai-logomark.png" alt="openai-compatible" name="Any OpenAI-Compatible Endpoint" />
-                        {/* dont know what to do with these */}
-                        {/* <ProviderLogo size={'sm'} className='brightness-50 p-4' src="/openhands.png" alt="openhands" name="OpenHands LM" /> */}
-                        {/* <ProviderLogo size={'sm'} className='brightness-50 p-3' src="/ms.png" alt="microsoft phi" name="Microsoft Phi 4" /> */}
-                    </div>
-
-                    <div className='text-balance mx-auto text-center max-w-[80%] text-gray-500'>
-                        {`Never run out of API credits again. Host any open source model with Void: DeepSeek, Llama, Gemini, Qwen, and more.`}
-                    </div>
-                </div>
-
-                {/* Box 2 */}
-                <div className='rounded-md gap-8 w-full flex flex-col justify-start bg-slate-100 p-8 max-sm:px-2 space-y-6'>
-                    <div className='text-center text-3xl font-black'>
-                        Frontier LLMs
-                    </div>
-
-                    <div className='flex gap-2 items-center justify-center grayscale' data-tooltip-id="hover-group-online">
-                        <ProviderLogo size={'lg'} className='brightness-50 md:p-2 p-1' src="/claude-icon.png" alt="Claude Logo" name="Anthropic" />
-                        <ProviderLogo size={'lg'} className='brightness-50 p-1 opacity-[80%]  md:p-2 ' src="/openai-logomark.png" alt="OpenAI Logo" name="OpenAI" />
-                        <ProviderLogo size={'lg'} className='brightness-50  md:p-3 p-1 ' src="/gemini.png" alt="Gemini Logo" name="Google Gemini" />
-                        <ProviderLogo size={'lg'} className='brightness-50 opacity-[80%]' src="/grok.png" alt="Grok Logo" name="xAI (Grok)" />
-                        {/* <ProviderLogo size={'lg'} className='brightness-[30%] p-1' src="/openrouter.png" alt="OpenRouter Logo" name="OpenRouter" /> */}
-                    </div>
-
-                    <div className='text-balance mx-auto text-center text-gray-500 max-w-[80%]'>
-                        {`Directly connect to any provider. Use models like Gemini 2.5, Claude 3.7, Grok 3, o4-mini, and Qwen 3. `}
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div>
             <h2 className='mx-auto text-center text-4xl lg:text-5xl tracking-tight font-black mt-20'>
-                {/* {`All you could ask for.`} */}
-                {/* {`And Much More.`} */}
-                {/* {"Features."} */}
-                {"The Latest Features."}
+                
+                {"Comes with Pre-installed Extensions"}
             </h2>
             <div className='mx-auto text-center max-sm:text-base text-lg max-w-2xl my-8'>
                 {/* {`We're experimenting with  `}
@@ -303,12 +232,11 @@ const ALotMoreFeatures = () => {
             </div>
             <div className="grid gap-8 grid-cols-1 md:grid-cols-2 justify-items-stretch max-w-[1200px] mx-auto">
                 {/* <GridElement name='Auto-Apply.' src='/demos/techstack.png' /> */}
-                <GridElement imageClassName='px-4 py-4 lg:px-24 lg:py-8' name='Checkpoints for LLM Changes.' src='/demos2/Checkpoints2.png' />
-                <GridElement imageClassName='px-4 py-4 lg:px-32 lg:py-4' name='Lint Error Detection.' src='/demos2/LintErrors3.png' />
-                <GridElement imageClassName='px-4 py-4 lg:px-20 lg:py-8' name='Tool Use.' src='/demos2/GatherMode.png' />
-                <GridElement imageClassName='' name='Fast Apply.' src='/demos3/example.png' />
-                <GridElement name='Works On 1000-Line Files.' src='/demos/instant.png' />
-                <GridElement imageClassName='py-4' name='Bring Any Model.' src='/demos3/bring-any-model.png' />
+                <GridElement imageClassName='py-4' name='UnitTest Stubs.' src='/demos/stubs.png' />
+                <GridElement imageClassName='px-4 py-4 lg:px-32 lg:py-4' name='Generate Graphs.' src='/demos/graph.png' />
+                <GridElement imageClassName='px-4 py-4 lg:px-20 lg:py-8' name='Solidity Matrix.' src='/demos/matrix.png' />
+                {/* <GridElement imageClassName='px-4 py-4 lg:px-20 lg:py-8' name='FIM Model Support.' src='/demos2/GatherMode.png' /> */}
+                <GridElement imageClassName='' name='Contract Compilation.' src='/demos/compile.png' />
                 {/* <GridElement name='Checkpoints.' src='/demos/techstack.png' /> */}
                 {/* <GridElement name='Auto-Fix Lint Errors.' src='/demos/techstack.png' /> */}
                 {/* <GridElement name='Autocomplete with FIM Models (e.g. Qwen 2.5-coder).' src='/demos/techstack.png' /> */}
@@ -333,47 +261,6 @@ const ALotMoreFeatures = () => {
                 </div> */}
             </div>
         </div>
-
-        <div>
-            <h2 className='mx-auto text-center text-4xl lg:text-5xl tracking-tight font-black'>
-                {"Agent Mode and MCP."}
-            </h2>
-            <div className='mx-auto text-center text-balance max-sm:text-base text-xl max-w-2xl my-8'>
-                {`Use any model in Agent or Gather mode - even open source models that don't natively support tool calling.`}
-            </div>
-
-
-            <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 mx-auto'>
-                {/* Agent Mode */}
-                <div className='rounded-xl overflow-hidden px-8 '>
-                    <div className='text-center text-3xl font-black mb-6'>
-                        Agent Mode
-                    </div>
-                    <div className='text-balance mx-auto text-center text-gray-600'>
-                        {`Agent mode can search, create, edit, and delete files & folders. It also has terminal access and MCP tool access.`}
-                    </div>
-
-                    <div className="w-full flex items-center justify-center">
-                        <img src='/demos3/agent.png' alt='Agent Mode' className={`max-h-[700px] max-w-full w-auto h-auto rounded-lg object-contain`} />
-                    </div>
-                </div>
-
-                {/* Gather Mode */}
-                <div className='rounded-xl overflow-hidden px-8 '>
-                    <div className='text-center text-3xl font-black mb-6'>
-                        Gather Mode
-                    </div>
-
-                    <div className='text-balance mx-auto text-center text-gray-600'>
-                        {`Gather mode is a restricted version of Agent mode that can only read and search, but not modify or edit.`}
-                    </div>
-                    <div className="w-full flex items-center justify-center">
-                        <img src='/demos3/gather.png' alt='Gather Mode' className={`max-h-[700px] max-w-full w-auto h-auto rounded-lg object-contain`} />
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </div>
 }
 
@@ -390,13 +277,13 @@ const PoweredByVscode = () => {
 
         <div className='mx-auto text-center text-balance max-sm:text-base text-xl max-w-[600px]'>
             <div className='text-center px-4 text-balance'>
-                {`Void is a fork of VS Code. We let you transfer over all your themes, keybinds, and settings in one click. `}
+                {`Sol Studio is a fork of VS Code. We let you transfer over all your themes, keybinds, and settings in one click. `}
             </div>
         </div>
         <div className='flex items-center gap-8'>
             <VscVscode className='size-20 fill-black/80' />
             <FaArrowsLeftRight className='size-6' />
-            <Image className='ml-2' src={process.env.NEXT_PUBLIC_LOGO_URL!} alt={`A slice of the void`} height={70} width={70} />
+            <Image className='ml-2' src={'sol-icon.svg'} alt={`A slice of the void`} height={70} width={70} />
         </div>
 
     </section>
@@ -412,12 +299,12 @@ const InterestedInContributing = () => {
 
         <div className='mx-auto text-center text-balance max-sm:text-base text-xl max-w-[700px]'>
             <div className='text-center px-4 text-balance'>
-                {`We host contributor meetups in our Discord server and share early releases with our community. Feel free to join!`}
+                {`Contribute to Sol Studios open-source development on GitHub. Help us build new features, improve performance, and enhance the Solidity developer experience.`}
             </div>
         </div>
         <div className='flex items-center justify-center gap-8'>
             <a href={discordLink}>
-                <FaDiscord className='size-20 fill-black/80' />
+                <FaGithub className='size-20 fill-black/80' />
             </a>
         </div>
 
@@ -439,14 +326,13 @@ const GetStartedWithVoid = () => {
 
                 <h1 className='  text-center font-extrabold tracking-tighter leading-tight hover:brightness-110 transition duration-200'>
                     <span className='text-white drop-shadow-xl text-3xl font-bold tracking-tighter'>
-                        Get Started with Void.
+                        Get Started with Sol Studio.
                     </span>
                 </h1>
 
 
                 <div className='isolate space-y-4'>
                     <StarOnGithubButton posthogLabel="3" />
-                    <DownloadButton posthogLabel="3" />
                 </div>
 
             </div>

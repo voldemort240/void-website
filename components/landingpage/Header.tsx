@@ -17,49 +17,17 @@ export const Header = () => {
 
                 <Link draggable={false} href='/' className='group pr-2'>
                     <h2 className="flex items-center gap-2 font-extrabold">
-                        <img className='group-hover:brightness-[2] duration-200' src={`${process.env.NEXT_PUBLIC_LOGO_URL!}`} alt='Void Logo' height={32} width={32} />
+                        <img className='group-hover:brightness-[2] duration-200' src={`sol-icon.svg`} alt='Void Logo' height={25} width={25} />
                         <div className="text-transparent tracking-tighter bg-clip-text bg-gradient-to-tl from-black to-gray-500 text-3xl whitespace-nowrap group-hover:brightness-150 duration-200">
-                            Void
+                            Sol Studio
                         </div>
                     </h2>
                 </Link>
 
 
-                <Link draggable={false} href={downloadLink} className='group py-1 px-2 rounded-md overflow-hidden hover:bg-gray-100 duration-100 max-[380px]:hidden'>
-                    <div className='flex items-center justify-center duration-200 gap-1'>
-                        <span className='text-lg whitespace-nowrap text-black '>
-                            Download
-                        </span>
-                    </div>
-                </Link>
-
-                {/* <Link draggable={false} href={waitlistLink} className='group py-1 px-2 rounded-md overflow-hidden hover:bg-gray-100 duration-100'>
-                    <div className='flex items-center justify-center duration-200 gap-1'>
-                        <span className='text-lg whitespace-nowrap text-black '>
-                            Waitlist
-                        </span>
-                    </div>
-                </Link> */}
-
-
-
-                <Link draggable={false} href={githubLink} className='group py-1 px-2 rounded-md overflow-hidden hover:bg-gray-100 duration-100 max-sm:hidden'>
-                    <div className='flex items-center justify-center duration-200 gap-1'>
-                        <span className='text-lg whitespace-nowrap text-black '>
-                            Contribute
-                        </span>
-                    </div>
-                </Link>
 
                 <div className='ml-auto' />
 
-                <a draggable={false} href={discordLink} target='_blank' rel="noreferrer noopener nofollow" className='group py-1 px-2 rounded-md overflow-hidden hover:bg-gray-100 duration-100 max-sm:hidden'>
-                    <div className='flex items-center justify-center duration-200 gap-1'>
-                        <span className='text-lg whitespace-nowrap text-black '>
-                            Discord
-                        </span>
-                    </div>
-                </a>
                 <a draggable={false} href={githubLink} target='_blank' rel="noreferrer noopener nofollow" className='group py-1 px-2 rounded-md overflow-hidden hover:bg-gray-100 duration-100 '>
                     <div className='flex items-center justify-center duration-200 gap-1'>
                         <span className='text-lg whitespace-nowrap text-black '>
